@@ -1,0 +1,145 @@
+:root {
+	--duration-openContent: 0.5s;
+	--delay-openContent: 1s;
+
+	--duration-intro: 5s;
+	--delay-intro: calc(var(--delay-openContent) + var(--duration-openContent));
+
+	--duration-mais: 2s;
+	--delay-mais: calc((var(--delay-intro) + var(--duration-intro)) - 2s);
+
+	--duration-ruche: 1.5s;
+	--delay-ruche: 	calc(var(--duration-intro) + var(--delay-intro));
+
+	--duration-texteDeRuche: 1s;
+	--delay-texteDeRuche: calc(var(--delay-ruche) + var(--duration-ruche));
+
+	--duration-abeille: 20s;
+	--delay-abeille: calc(var(--duration-ruche) + var(--delay-ruche));
+
+	--duration-donut: 1s;
+
+	--duration-vegetaux: var(--duration-donut);
+	--delay-vegetaux: calc(var(--delay-abeille) + (var(--duration-abeille)) * 0.2);
+	--pourcentage-vegetaux: calc(80 / 100);
+	--strokeOff-vegetaux: calc(360 - (var(--pourcentage-vegetaux) * 360));
+
+	--duration-disparition: var(--duration-donut);
+	--delay-disparition: calc(var(--delay-abeille) + (var(--duration-abeille)) * 0.4);
+	--pourcentage-disparition: calc(30 / 100);
+	--strokeOff-disparition: calc(360 - (var(--pourcentage-disparition) * 360));
+
+	--duration-alimentation: var(--duration-donut);
+	--delay-alimentation: calc(var(--delay-abeille) + (var(--duration-abeille)) * 0.6);
+	--pourcentage-alimentation: calc(35 / 100);
+	--strokeOff-alimentation: calc(360 - (var(--pourcentage-alimentation) * 360));
+
+	--duration-pollens: var(--duration-donut);
+	--delay-pollens: calc(var(--delay-abeille) + (var(--duration-abeille)) * 0.8);
+	--pourcentage-pollens: calc(35 / 100);
+	--strokeOff-pollens: calc(360 - (var(--pourcentage-pollens) * 360));
+
+	--duration-texte: 0.5s;
+	--delay-texteA: calc(var(--delay-abeille) + (var(--duration-abeille)) * 0.90);
+	--delay-texteB: calc(var(--delay-abeille) + (var(--duration-abeille)) * 0.93);
+
+}
+
+#content {
+	animation: openContent var(--duration-openContent) forwards;
+	animation-delay: var(--delay-openContent);
+}
+
+#intro {
+	animation: apparait var(--duration-intro) forwards;
+	animation-delay: var(--delay-intro);
+}
+
+#texteDeRuche {
+	animation: rentreDansRuche var(--duration-texteDeRuche) forwards;
+	animation-delay: var(--delay-texteDeRuche);
+}
+
+#mais {
+	animation: apparait var(--duration-mais) forwards;
+	animation-delay: var(--delay-mais);
+}
+
+.ruche {
+	animation-name: ruche;
+	animation-duration: var(--duration-ruche);
+	animation-fill-mode: both;
+	animation-delay: var(--delay-ruche);
+}
+
+.abeille {
+	animation: abeille var(--duration-abeille) forwards;
+  	transition-timing-function: ease-in;
+	animation-delay: var(--delay-abeille);
+}
+
+.vegetaux .circle_animation {
+  animation: donut_vegetaux var(--duration-vegetaux) ease-out forwards;
+  animation-delay: var(--delay-vegetaux);
+}
+
+.vegetaux h2 {
+  animation: apparait var(--duration-vegetaux) ease-out forwards;
+  animation-delay: var(--delay-vegetaux);
+}
+.vegetaux::after {
+  animation: apparait var(--duration-vegetaux) ease-out forwards;
+  animation-delay: var(--delay-vegetaux);
+}
+
+.disparition .circle_animation {
+  animation: donut_disparition var(--duration-disparition) ease-out forwards;
+  animation-delay: var(--delay-disparition);
+}
+
+.disparition h2 {
+  animation: apparait var(--duration-disparition) ease-out forwards;
+  animation-delay: var(--delay-disparition);
+}
+.disparition::after {
+  animation: apparait var(--duration-disparition) ease-out forwards;
+  animation-delay: var(--delay-disparition);
+}
+
+.alimentation .circle_animation {
+  animation: donut_alimentation var(--duration-alimentation) ease-out forwards;
+  animation-delay: var(--delay-alimentation);
+}
+
+.alimentation h2 {
+  animation: apparait var(--duration-alimentation) ease-out forwards;
+  animation-delay: var(--delay-alimentation);
+}
+.alimentation::after {
+  animation: apparait var(--duration-alimentation) ease-out forwards;
+  animation-delay: var(--delay-alimentation);
+}
+
+.pollens .circle_animation {
+  animation: donut_pollens var(--duration-pollens) ease-out forwards;
+  animation-delay: var(--delay-pollens);
+}
+
+.pollens h2 {
+  animation: apparait var(--duration-pollens) ease-out forwards;
+  animation-delay: var(--delay-pollens);
+}
+.pollens::after {
+  animation: apparait var(--duration-pollens) ease-out forwards;
+  animation-delay: var(--delay-pollens);
+}
+
+#textFinA {
+  animation: apparaitEtZoom var(--duration-donut) ease-out forwards;
+  animation-delay: var(--delay-texteA);
+}
+
+#textFinB {
+  animation: apparaitEtZoom var(--duration-texte) ease-out forwards;
+  animation-delay: var(--delay-texteB);
+}

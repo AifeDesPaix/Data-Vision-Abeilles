@@ -1,0 +1,70 @@
+:root {
+	--page-width: 1080px;
+	--page-height: 720px;
+	--title-size: 150px;
+}
+
+html, body {
+	font-family: 'Coiny', cursive;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	overflow: hidden;
+}
+
+#content {
+	visibility: hidden;
+	position: absolute;
+	width: var(--page-width);
+	height: var(--page-height);
+	left: calc(50% - (var(--page-width) / 2));
+	top: calc(50% - (var(--page-height) / 2));
+	padding: 0;
+}
+
+#content::after {
+	content: 'Les Abeilles';
+	position: absolute;
+	font-size: var(--title-size);
+	color: #fff;
+	width: 100%;
+	text-align: center;
+	top: calc(-1 * (var(--title-size)));
+	text-shadow: 10px 0 0 #000;
+	transform:;
+}
+
+#textFinA {
+	top: 10%;
+	font-size: 1.1em;
+}
+#textFinB {
+	top: 23%;
+	font-size: 1.1em;
+}
+
+.texteZone {
+	position: absolute;
+	opacity: 0;
+	width: 300px;
+	left: calc(50% - 150px);
+	text-align: center;
+}
+
+#intro {
+	opacity: 0;
+}
+
+#mais {
+	opacity: 0;
+}
+
+#texteDeRuche {
+	font-size: 2em;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	top: 25%;
+}

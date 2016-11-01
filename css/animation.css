@@ -1,0 +1,214 @@
+@keyframes openContent {
+	0% {
+		visibility: visible;
+		transform: scale(0);
+	}
+	100% {
+		visibility: visible;
+		transform: scale(1);
+		background-color: #ffbc31;
+	}
+}
+
+@keyframes ruche {
+	0%, 60%, 75%, 90%, 100% { transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); }
+
+	0% {
+		opacity: 0;
+		transform: translate3d(0, -3000px, 0);
+	}
+
+	60% {
+		opacity: 1;
+		transform: translate3d(0, 25px, 0);
+	}
+
+	75% { transform: translate3d(0, -10px, 0); }
+
+	90% { transform: translate3d(0, 5px, 0); }
+
+	100% { transform: none; }
+}
+
+@keyframes abeille {
+	0% {
+		opacity: 0;
+		top: 60%;
+		left: calc(50% - (var(--abeille-width) / 2));
+	}
+
+	1% {
+		opacity: 1;
+	}
+
+	19% {
+		transform: rotate(0deg) scaleX(1);
+		top: 20%;
+		left: 70%;
+	}
+
+	20% {
+		transform: rotate(-60deg) scaleX(1);
+		top: 20%;
+		left: 70%;
+	}
+
+	21% {
+		transform: rotate(0deg) scaleX(1);
+		top: 20%;
+		left: 70%;
+	}
+
+	39% {
+		transform: rotate(0deg) scaleX(1);
+		top: 70%;
+		left: 70%;
+	}
+	40% {
+		transform: rotate(-60deg) scaleX(1);
+		top: 70%;
+		left: 70%;
+	}
+	41% {
+		transform: rotate(0deg) scaleX(1);
+		top: 70%;
+		left: 70%;
+	}
+	42% {
+		transform: rotate(0deg) scaleX(-1);
+		top: 70%;
+		left: 70%;
+	}
+
+	59% {
+		transform: rotate(0deg) scaleX(-1);
+		top: 20%;
+		left: 30%;
+	}
+	60% {
+		transform: rotate(60deg) scaleX(-1);
+		top: 20%;
+		left: 30%;
+	}
+	61% {
+		transform: rotate(0deg) scaleX(-1);
+		top: 20%;
+		left: 30%;
+	}
+
+	79% {
+		transform: rotate(0deg) scaleX(-1);
+		top: 70%;
+		left: 30%;
+	}
+	80% {
+		transform: rotate(60deg) scaleX(-1);
+		top: 70%;
+		left: 30%;
+	}
+	81% {
+		transform: rotate(0deg) scaleX(-1);
+	}
+	82% {
+		transform: rotate(0deg) scaleX(1);
+	}
+
+	90% {
+		top: 10%;
+		left: 50%;
+        transform: rotate(0deg) scale(1);
+	}
+
+	93% {
+		top: 30%;
+		left: 50%;
+        transform: rotate(0deg) scale(1);
+	}
+
+	95% {
+		top: 38%;
+		left: 50%;
+        transform: rotate(0deg) scale(1);
+	}
+
+	97% {
+		top: 41.3%;
+		left: 50%;
+        transform: rotate(0deg) scale(1);
+	}
+
+	100% {
+        transform: rotate(-90deg) scale(2.5);
+		top: 41.3%;
+		left: 50%;
+	}
+}
+
+@keyframes apparait {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes rentreDansRuche {
+	100% {
+		top: 50%;
+		font-size: 1.3em;
+	}
+}
+
+@keyframes apparaitEtZoom {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+		font-size: 1.1em;
+		width: 300px;
+		left: calc(50% - 150px);
+	}
+	50% {
+		font-size: 1.3em;
+		width: 360px;
+		left: calc(50% - 180px);
+	}
+	75% {
+		font-size: 1.1em;
+		width: 300px;
+		left: calc(50% - 150px);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes donut_vegetaux {
+	100% {
+		stroke-dashoffset: 72;
+		/*stroke-dashoffset: var(--strokeOff-vegetaux)*/
+	}
+}
+
+@keyframes donut_disparition {
+  100% {
+		stroke-dashoffset: 300;
+		/*stroke-dashoffset: var(--strokeOff-disparition)*/
+  }
+}
+
+@keyframes donut_alimentation {
+  100% {
+		stroke-dashoffset: 290;
+		/*stroke-dashoffset: var(--strokeOff-alimentation)*/
+  }
+}
+
+@keyframes donut_pollens {
+  100% {
+		stroke-dashoffset: 140;
+		/*stroke-dashoffset: var(--strokeOff-pollens)*/
+  }
+}

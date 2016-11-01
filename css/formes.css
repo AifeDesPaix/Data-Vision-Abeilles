@@ -1,0 +1,124 @@
+:root {
+	--abeille-width: 50px;
+	--abeille-height: 50px;
+
+	--ruche-width: 200px;
+	--ruche-height: 120px;
+	--ruche-border: 10px;
+	--ruche-color-arround: #000;
+	--ruche-color-inner: #e0a020;
+
+	--donut-diametre: 160px;
+	--donut-infos-width: 250px;
+}
+
+.abeille {
+	width: var(--abeille-width);
+	height: var(--abeille-height);
+	position: absolute;
+	left: calc(-1 * var(--abeille-width));
+	transform: rotate(0deg);
+}
+
+.ruche {
+	border-radius: var(--ruche-border);
+	width: var(--ruche-width);
+	height: var(--ruche-height);
+	position: absolute;
+	top: 50%;
+	left: calc(50% - ((var(--ruche-width) / 2) + var(--ruche-border)));
+	background-color: var(--ruche-color-inner);
+	border: var(--ruche-border) solid var(--ruche-color-arround);
+	text-align: center;
+}
+
+.ruche::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: calc(-1 * var(--ruche-border));
+	background-color: #000;
+	height: calc(var(--ruche-height) * 2);
+	width: var(--ruche-border);
+}
+
+.ruche::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: var(--ruche-width);
+	background-color: #000;
+	height: calc(var(--ruche-height) * 2);
+	width: var(--ruche-border);
+}
+
+.donut {
+    position: absolute;
+}
+
+.donut h2 {
+    text-align:center;
+    position: absolute;
+    line-height: 125px;
+    width: 100%;
+	opacity: 0;
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+.circle_animation {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.donut svg {
+	width: var(--donut-diametre);
+	height: var(--donut-diametre);
+}
+
+.donut_haut {
+	top: 15%;
+}
+
+.donut_bas {
+	top: 55%;
+}
+
+.donut_gauche {
+	left: calc((-1 * ((var(--donut-diametre) - var(--donut-infos-width)) / 2)) + 50px);
+}
+
+.donut_droite {
+	left: calc(100% - var(--donut-infos-width));
+}
+
+.donut::after {
+	width: var(--donut-infos-width);
+	left: calc((var(--donut-diametre) - var(--donut-infos-width)) / 2);
+	text-align: justify;
+	position: absolute;
+	opacity: 0;
+}
+
+.vegetaux::after {
+	content: 'Des végétaux sont polinisés par des insectes.';
+}
+
+.disparition::after {
+	content: "Des colonies d'abeilles disparaissent chaque année.";
+}
+
+.alimentation::after {
+	content: "Des cultures agricoles mondiales dépendent de la polinisation des abeilles.";
+}
+
+.pollens::after {
+	content: "Des pollens on disparus en 50 ans.";
+}
+
+#LaBeille {
+	width: var(--abeille-width);
+	height: var(--abeille-height);
+}
