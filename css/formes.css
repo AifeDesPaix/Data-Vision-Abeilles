@@ -6,7 +6,7 @@
 	--ruche-height: 120px;
 	--ruche-border: 10px;
 	--ruche-color-arround: #000;
-	--ruche-color-inner: #e0a020;
+	--ruche-color-inner: #e6b800;
 
 	--donut-diametre: 160px;
 	--donut-infos-width: 250px;
@@ -30,6 +30,9 @@
 	background-color: var(--ruche-color-inner);
 	border: var(--ruche-border) solid var(--ruche-color-arround);
 	text-align: center;
+	background-image: url(http://www.geepi.fr/wp-content/uploads/2015/09/Ruche.jpg);
+	background-size: 100% auto;
+
 }
 
 .ruche::before {
@@ -100,6 +103,8 @@ svg {
 	text-align: justify;
 	position: absolute;
 	opacity: 0;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 5px;
 }
 
 .vegetaux::after {
