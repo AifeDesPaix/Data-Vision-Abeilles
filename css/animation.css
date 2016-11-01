@@ -138,8 +138,8 @@
 	}
 
 	100% {
-        transform: rotate(-90deg) scale(2.5);
-		top: 41.3%;
+        transform: rotate(-90deg) scale(1.5);
+		top: 43.3%;
 		left: 50%;
 	}
 }
@@ -157,6 +157,8 @@
 	100% {
 		top: 50%;
 		font-size: 1.3em;
+		color: #ffcc00;
+		text-shadow: 2px -1px 0 #000;
 	}
 }
 

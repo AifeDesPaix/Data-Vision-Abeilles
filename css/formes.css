@@ -26,12 +26,12 @@
 	height: var(--ruche-height);
 	position: absolute;
 	top: 50%;
-	left: calc(50% - ((var(--ruche-width) / 2) + var(--ruche-border)));
+	left: calc(50% - ((var(--ruche-width) / 2)  + var(--ruche-border)));
 	background-color: var(--ruche-color-inner);
 	border: var(--ruche-border) solid var(--ruche-color-arround);
 	text-align: center;
-	background-image: url(http://www.geepi.fr/wp-content/uploads/2015/09/Ruche.jpg);
-	background-size: 100% auto;
+	background-image: url(../images/image-libre.jpg);
+	background-size: 100% 100%;
 
 }
 
@@ -108,7 +108,7 @@ svg {
 }
 
 .vegetaux::after {
-	content: 'Des végétaux sont polinisés par des insectes.';
+	content: 'Des végétaux sont pollinisés par des insectes.';
 }
 
 .disparition::after {

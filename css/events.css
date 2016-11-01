@@ -14,7 +14,7 @@
 	--duration-texteDeRuche: 1s;
 	--delay-texteDeRuche: calc(var(--delay-ruche) + var(--duration-ruche));
 
-	--duration-abeille: 20s;
+	--duration-abeille: 15s;
 	--delay-abeille: calc(var(--duration-ruche) + var(--delay-ruche));
 
 	--duration-donut: 1s;
