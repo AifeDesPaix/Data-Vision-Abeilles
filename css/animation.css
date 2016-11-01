@@ -6,7 +6,7 @@
 	100% {
 		visibility: visible;
 		transform: scale(1);
-		background-color: #ffcc00;
+		background-color: var(--color-fond);
 	}
 }
 
@@ -132,7 +132,7 @@
 	}
 
 	97% {
-		top: 41.3%;
+		top: 42.3%;
 		left: 50%;
         transform: rotate(0deg) scale(1);
 	}
@@ -141,6 +141,7 @@
         transform: rotate(-90deg) scale(1.5);
 		top: 43.3%;
 		left: 50%;
+		opacity: 1;
 	}
 }
 
@@ -153,11 +154,21 @@
 	}
 }
 
+
+@keyframes backflip {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 @keyframes rentreDansRuche {
 	100% {
 		top: 50%;
 		font-size: 1.3em;
-		color: #ffcc00;
+		color: var(--color-fond);
 		text-shadow: 2px -1px 0 #000;
 	}
 }

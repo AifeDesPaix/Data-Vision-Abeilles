@@ -12,6 +12,7 @@ html, body {
 	padding: 0;
 	background-color: #000;
 	overflow: hidden;
+	cursor: default;
 }
 
 #content {
@@ -33,7 +34,6 @@ html, body {
 	text-align: center;
 	top: calc(-1 * (var(--title-size)));
 	text-shadow: 10px 0 0 #000;
-	transform:;
 }
 
 #textFinA {
@@ -67,4 +67,8 @@ html, body {
 	position: absolute;
 	text-align: center;
 	top: 25%;
+}
+
+#intro:hover, #mais:hover {
+	color: var(--color-enhanced);
 }

@@ -74,7 +74,6 @@
 
 .abeille {
 	animation: abeille var(--duration-abeille) forwards;
-  	transition-timing-function: ease-in;
 	animation-delay: var(--delay-abeille);
 }
 

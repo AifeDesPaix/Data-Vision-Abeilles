@@ -1,4 +1,7 @@
 :root {
+	--color-fond: #EC7A00;
+	--color-enhanced: #F13200;
+
 	--abeille-width: 50px;
 	--abeille-height: 50px;
 
@@ -16,8 +19,9 @@
 	width: var(--abeille-width);
 	height: var(--abeille-height);
 	position: absolute;
-	left: calc(-1 * var(--abeille-width));
+	opacity: 0;
 	transform: rotate(0deg);
+	z-index: 100;
 }
 
 .ruche {
@@ -32,7 +36,13 @@
 	text-align: center;
 	background-image: url(../images/image-libre.jpg);
 	background-size: 100% 100%;
+}
 
+.abeille:hover::after {
+	content: "Bonjour je suis une abeille et je te déteste.";
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 .ruche::before {
@@ -100,11 +110,19 @@ svg {
 .donut::after {
 	width: var(--donut-infos-width);
 	left: calc((var(--donut-diametre) - var(--donut-infos-width)) / 2);
-	text-align: justify;
+	text-align: center;
 	position: absolute;
 	opacity: 0;
 	background-color: rgba(255, 255, 255, 0.1);
 	padding: 5px;
+}
+
+.donut:hover {
+	color: var(--color-enhanced);
+}
+
+.donut:hover::after {
+	border: 1px solid black;
 }
 
 .vegetaux::after {
