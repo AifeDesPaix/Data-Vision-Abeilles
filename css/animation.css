@@ -30,6 +30,17 @@
 	100% { transform: none; }
 }
 
+@keyframes rentreDansRuche {
+	100% {
+		top: 50%;
+		font-size: 1.3em;
+		color: var(--color-fond);
+		text-shadow: 2px -1px 0 #000;
+		width: var(--ruche-width);
+		left: calc(50% - (var(--ruche-width) / 2));
+	}
+}
+
 @keyframes abeille {
 	0% {
 		opacity: 0;
@@ -154,25 +165,6 @@
 	}
 }
 
-
-@keyframes backflip {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(360deg);
-	}
-}
-
-@keyframes rentreDansRuche {
-	100% {
-		top: 50%;
-		font-size: 1.3em;
-		color: var(--color-fond);
-		text-shadow: 2px -1px 0 #000;
-	}
-}
-
 @keyframes apparaitEtZoom {
 	0% {
 		opacity: 0;
@@ -195,6 +187,38 @@
 	}
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes apparaitEtZigzague {
+	0% {
+		visibility: hidden;
+	}
+	20% {
+		visibility: visible;
+		opacity: 1;
+		left: -5%;
+	}
+	50% {
+		left: 5%;
+	}
+	75% {
+		left: -5%;
+	}
+	100% {
+		visibility: visible;
+		left: 0;
+		opacity: 1;
+	}
+}
+
+
+@keyframes backflip {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
 	}
 }
 

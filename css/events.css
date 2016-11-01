@@ -14,7 +14,7 @@
 	--duration-texteDeRuche: 1s;
 	--delay-texteDeRuche: calc(var(--delay-ruche) + var(--duration-ruche));
 
-	--duration-abeille: 15s;
+	--duration-abeille: 25s;
 	--delay-abeille: calc(var(--duration-ruche) + var(--delay-ruche));
 
 	--duration-donut: 1s;
@@ -43,6 +43,8 @@
 	--delay-texteA: calc(var(--delay-abeille) + (var(--duration-abeille)) * 0.90);
 	--delay-texteB: calc(var(--delay-abeille) + (var(--duration-abeille)) * 0.93);
 
+	--duration-fin: 2s;
+	--delay-fin: calc(var(--delay-abeille) + (var(--duration-abeille)) + 3s);
 }
 
 #content {
@@ -141,4 +143,9 @@
 #textFinB {
   animation: apparaitEtZoom var(--duration-texte) ease-out forwards;
   animation-delay: var(--delay-texteB);
+}
+
+#fin {
+	animation: apparaitEtZigzague var(--duration-fin) ease-out forwards;
+	animation-delay: var(--delay-fin);
 }
